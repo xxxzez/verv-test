@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/verv-test-project/static/css/main.93a0497a.css",
+    "main.js": "/verv-test-project/static/js/main.230aa275.js",
+    "static/media/MostPopularLabel.svg": "/verv-test-project/static/media/MostPopularLabel.d3d820d898efd7888d0dec06e22882af.svg",
+    "index.html": "/verv-test-project/index.html",
+    "static/media/ActiveCheckbox.svg": "/verv-test-project/static/media/ActiveCheckbox.fbbd8834644f1054a06fc41e0d782f61.svg",
+    "static/media/NotActiveCheckbox.svg": "/verv-test-project/static/media/NotActiveCheckbox.8abbbc601a4839192da484d2970f1872.svg",
+    "main.93a0497a.css.map": "/verv-test-project/static/css/main.93a0497a.css.map",
+    "main.230aa275.js.map": "/verv-test-project/static/js/main.230aa275.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93a0497a.css",
+    "static/js/main.230aa275.js"
+  ]
+}
