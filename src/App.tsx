@@ -7,15 +7,18 @@ import {
   Banner,
   BannerSubtitle,
   BannerTitle,
+  CentsPerDay,
   Checkbox,
   ChoosePlanButton,
+  Currency,
   PlanCost,
   PlanDescription,
   PlanItem,
   PlanListTitle,
   PlanTitle,
-  PopularLabel,
   PriceContainer,
+  PriceDescription,
+  TruncPrice,
 } from './styles'
 import { planItems } from './data'
 
@@ -33,7 +36,7 @@ export const App = () => {
           Walking app to help you reach your goal.
         </BannerSubtitle>
 
-        <PlanListTitle>Choose you plan</PlanListTitle>
+        <PlanListTitle>Choose your plan</PlanListTitle>
         {planItems.map((planItem) => (
           <PlanItem
             key={planItem.id}
@@ -48,11 +51,7 @@ export const App = () => {
               )}
             </Checkbox>
             <PlanDescription>
-              {planItem.isMostPopular && (
-                <PopularLabel>
-                  <MostPopularLabel />
-                </PopularLabel>
-              )}
+              {planItem.isMostPopular && <MostPopularLabel />}
               <PlanTitle>
                 {planItem.title}
                 {planItem.isSpecialOffer && '⭐️'}
@@ -62,11 +61,24 @@ export const App = () => {
               </PlanCost>
             </PlanDescription>
             <PriceContainer isActive={activePlan === planItem.id}>
-              {planItem.pricePerDay}
+              <Currency>$</Currency>
+              <TruncPrice>{Math.trunc(+planItem.pricePerDay)}</TruncPrice>
+              <CentsPerDay>
+                <Currency>{planItem.pricePerDay.split('.')[1]}</Currency>
+                <PriceDescription>per day</PriceDescription>
+              </CentsPerDay>
             </PriceContainer>
           </PlanItem>
         ))}
-        <ChoosePlanButton onClick={() => console.log(activePlan)}>
+        <ChoosePlanButton
+          onClick={() =>
+            alert(
+              `${planItems[activePlan - 1].title} for ${
+                planItems[activePlan - 1].priceDescription
+              }`
+            )
+          }
+        >
           Get my plan
         </ChoosePlanButton>
       </Banner>
