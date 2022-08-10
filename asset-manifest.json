@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/verv-test/static/css/main.93a0497a.css",
-    "main.js": "/verv-test/static/js/main.913cc569.js",
+    "main.js": "/verv-test/static/js/main.a19014f4.js",
     "static/media/MostPopularLabel.svg": "/verv-test/static/media/MostPopularLabel.d3d820d898efd7888d0dec06e22882af.svg",
     "static/media/NotACtivePriceContainer.svg": "/verv-test/static/media/NotACtivePriceContainer.f33fada4f509d2ff24efa37ee0f720d6.svg",
     "index.html": "/verv-test/index.html",
@@ -9,10 +9,10 @@
     "static/media/ActiveCheckbox.svg": "/verv-test/static/media/ActiveCheckbox.fbbd8834644f1054a06fc41e0d782f61.svg",
     "static/media/NotActiveCheckbox.svg": "/verv-test/static/media/NotActiveCheckbox.8abbbc601a4839192da484d2970f1872.svg",
     "main.93a0497a.css.map": "/verv-test/static/css/main.93a0497a.css.map",
-    "main.913cc569.js.map": "/verv-test/static/js/main.913cc569.js.map"
+    "main.a19014f4.js.map": "/verv-test/static/js/main.a19014f4.js.map"
   },
   "entrypoints": [
     "static/css/main.93a0497a.css",
-    "static/js/main.913cc569.js"
+    "static/js/main.a19014f4.js"
   ]
 }
