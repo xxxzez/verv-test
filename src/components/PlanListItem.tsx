@@ -1,20 +1,16 @@
+import { FC } from 'react'
 import { ReactComponent as ActiveCheckbox } from '../assets/icons/ActiveCheckbox.svg'
 import { ReactComponent as NotActiveCheckbox } from '../assets/icons/NotActiveCheckbox.svg'
 import { ReactComponent as MostPopularLabel } from '../assets/icons/MostPopularLabel.svg'
 import {
-  CentsPerDay,
   Checkbox,
-  Currency,
   PlanCost,
   PlanDescription,
   PlanItem,
   PlanTitle,
-  PriceContainer,
-  PriceDescription,
-  TruncPrice,
 } from '../styles/PlanList.styles'
-import { Plan } from '../db/Data'
-import { FC } from 'react'
+import { PlanLabel } from './PriceLabel'
+import { Plan } from '../types/common'
 
 type PlanListItemProps = {
   choosePlanHandler: (activePlan: number) => void
@@ -43,14 +39,7 @@ export const PlanListItem: FC<PlanListItemProps> = ({
         </PlanTitle>
         <PlanCost isActive={isActive}>{planItem.priceDescription}</PlanCost>
       </PlanDescription>
-      <PriceContainer isActive={isActive}>
-        <Currency>$</Currency>
-        <TruncPrice>{Math.trunc(+planItem.pricePerDay)}</TruncPrice>
-        <CentsPerDay>
-          <Currency>{planItem.pricePerDay.split('.')[1]}</Currency>
-          <PriceDescription>per day</PriceDescription>
-        </CentsPerDay>
-      </PriceContainer>
+      <PlanLabel isActive={isActive} price={planItem.pricePerDay} />
     </PlanItem>
   )
 }

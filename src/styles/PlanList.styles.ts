@@ -1,11 +1,6 @@
 import styled from 'styled-components'
-import NotACtivePriceContainer from '../assets/icons/NotACtivePriceContainer.svg'
-import ActivePriceContainer from '../assets/icons/ActivePriceContainer.svg'
-import { APP_COLORS } from './Constants'
-
-type PlanListItemProps = {
-  isActive: boolean
-}
+import { PlanActiveness } from '../types/common'
+import { APP_BACKGROUNDS, APP_COLORS } from './Constants'
 
 export const Banner = styled.div`
   display: flex;
@@ -45,7 +40,7 @@ export const PlanListTitle = styled.div`
   color: ${APP_COLORS.PRIMARY};
 `
 
-export const PlanItem = styled.div<PlanListItemProps>`
+export const PlanItem = styled.div<PlanActiveness>`
   display: flex;
   align-self: flex-start;
   align-items: center;
@@ -54,12 +49,10 @@ export const PlanItem = styled.div<PlanListItemProps>`
   width: 331px;
   height: 80px;
   background: ${({ isActive }) =>
-    isActive
-      ? 'linear-gradient(225deg, #F66672 0%, #F32567 100%)'
-      : APP_COLORS.WHITE};
+    isActive ? APP_BACKGROUNDS.ACTIVE_PLAN : APP_COLORS.WHITE};
   border-radius: 16px;
   border: ${({ isActive }) =>
-    isActive ? '2px solid transparent' : '2px solid #d8d8d8'};
+    isActive ? '2px solid transparent' : `2px solid ${APP_COLORS.GREY}`};
   color: ${({ isActive }) =>
     isActive ? APP_COLORS.WHITE : APP_COLORS.PRIMARY};
 `
@@ -81,7 +74,7 @@ export const PlanTitle = styled.div` {
   margin-bottom: 2px;
 `
 
-export const PlanCost = styled.div<PlanListItemProps>`
+export const PlanCost = styled.div<PlanActiveness>`
   font-weight: ${({ isActive }) => (isActive ? '400' : '300')};
   font-size: 12px;
   line-height: 14px;
@@ -98,7 +91,7 @@ export const Checkbox = styled.div`
 `
 
 export const ChoosePlanButton = styled.button`
-  background: #f24e5d;
+  background: ${APP_COLORS.BUTTON};
   border-radius: 100px;
   font-family: 'Roboto';
   font-weight: 700;
@@ -111,53 +104,4 @@ export const ChoosePlanButton = styled.button`
   border: none;
   margin-top: 20px;
   color: ${APP_COLORS.WHITE};
-`
-
-export const PriceContainer = styled.div<PlanListItemProps>`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  background: url(${({ isActive }) =>
-      isActive ? ActivePriceContainer : NotACtivePriceContainer})
-    no-repeat;
-  width: 78.5px;
-  height: 45px;
-  margin-left: auto;
-  margin-right: 13.5px;
-  position: relative;
-  color: ${APP_COLORS.PRIMARY};
-  border-radius: 5px;
-`
-
-export const Currency = styled.div`
-  width: 10px;
-  height: 19px;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  margin-top: 8px;
-`
-export const TruncPrice = styled.div`
-  width: 21px;
-  height: 42px;
-  margin-top: 2px;
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-`
-export const CentsPerDay = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-export const PriceDescription = styled.div`
-  width: 33px;
-  height: 12px;
-
-  font-weight: 300;
-  font-size: 10px;
-  line-height: 12px;
 `

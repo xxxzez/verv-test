@@ -6,7 +6,7 @@ import {
   ChoosePlanButton,
   PlanListTitle,
 } from '../styles/PlanList.styles'
-import { PlanItems } from '../db/Data'
+import { PlanItems } from '../db/data'
 import { PlanListItem } from './PlanListItem'
 
 export const PlanList = () => {
