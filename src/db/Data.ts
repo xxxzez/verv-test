@@ -1,4 +1,13 @@
-export const planItems = [
+export type Plan = {
+  id: number
+  title: string
+  priceDescription: string
+  pricePerDay: string
+  isMostPopular: boolean
+  isSpecialOffer: boolean
+}
+
+export const PlanItems: Plan[] = [
   {
     id: 1,
     title: '1-month plan',
