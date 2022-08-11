@@ -8,7 +8,7 @@ import {
   PlanDescription,
   PlanItem,
   PlanTitle,
-} from '../styles/PlanList.styles'
+} from '../styles/PlanListItem.styles'
 import { PlanLabel } from './PriceLabel'
 import { Plan } from '../types/common'
 

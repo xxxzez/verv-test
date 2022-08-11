@@ -35,7 +35,8 @@ export const PriceDescription = styled.div`
   font-weight: 300;
   font-size: 10px;
   line-height: 12px;
-  margin-left: 4px;
+  margin-left: 2px;
+  margin-top: -2px;
 `
 export const PriceContainer = styled.div<PlanActiveness>`
   display: flex;
