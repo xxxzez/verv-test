@@ -18,6 +18,7 @@ export const PlanItem = styled.div<PlanActiveness>`
   color: ${({ isActive }) =>
     isActive ? APP_COLORS.WHITE : APP_COLORS.PRIMARY};
 `
+
 export const PlanTitle = styled.div` {
   display: flex;
   align-items: center;

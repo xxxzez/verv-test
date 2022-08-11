@@ -25,6 +25,7 @@ export const PlanList = () => {
       <BannerSubtitle>Walking app to help you reach your goal.</BannerSubtitle>
 
       <PlanListTitle>Choose your plan</PlanListTitle>
+
       {PlanItems.map((planItem) => (
         <PlanListItem
           planItem={planItem}
@@ -33,6 +34,7 @@ export const PlanList = () => {
           isActive={activePlan === planItem.id}
         />
       ))}
+
       <ChoosePlanButton
         onClick={() =>
           alert(

@@ -14,6 +14,7 @@ export const Currency = styled.div`
   margin-top: 10px;
   margin-left: 2px;
 `
+
 export const TruncPrice = styled.div`
   width: 21px;
   height: 42px;
@@ -23,6 +24,7 @@ export const TruncPrice = styled.div`
   font-size: 36px;
   line-height: 42px;
 `
+
 export const CentsPerDay = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,6 +40,7 @@ export const PriceDescription = styled.div`
   margin-left: 2px;
   margin-top: -2px;
 `
+
 export const PriceContainer = styled.div<PlanActiveness>`
   display: flex;
   flex-direction: row;
