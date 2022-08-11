@@ -4,7 +4,7 @@ import {
   PriceContainer,
   PriceDescription,
   TruncPrice,
-} from '../styles/PriceLabel.styles'
+} from './styles'
 import { FC } from 'react'
 
 type PriceLabelProps = {

@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import { ReactComponent as ActiveCheckbox } from '../assets/icons/ActiveCheckbox.svg'
-import { ReactComponent as NotActiveCheckbox } from '../assets/icons/NotActiveCheckbox.svg'
-import { ReactComponent as MostPopularLabel } from '../assets/icons/MostPopularLabel.svg'
+import { ReactComponent as ActiveCheckbox } from '../../assets/icons/ActiveCheckbox.svg'
+import { ReactComponent as NotActiveCheckbox } from '../../assets/icons/NotActiveCheckbox.svg'
+import { ReactComponent as MostPopularLabel } from '../../assets/icons/MostPopularLabel.svg'
 import {
   Checkbox,
   Label,
@@ -9,9 +9,9 @@ import {
   PlanDescription,
   PlanItem,
   PlanTitle,
-} from '../styles/PlanListItem.styles'
-import { PlanLabel } from './PriceLabel'
-import { Plan } from '../types/common'
+} from './styles'
+import { PlanLabel } from '../PriceLabel/PriceLabel'
+import { Plan } from '../../types/common'
 
 type PlanListItemProps = {
   choosePlanHandler: (activePlan: number) => void

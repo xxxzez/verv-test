@@ -1,4 +1,4 @@
-import { PlanList } from './components/PlanList'
+import { PlanList } from './components/PlanList/PlanList'
 import { AppContainer } from './styles/App.styles'
 
 export const App = () => {

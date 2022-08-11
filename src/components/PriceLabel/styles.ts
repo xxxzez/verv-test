@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import NotACtivePriceContainer from '../assets/icons/NotACtivePriceContainer.svg'
-import ActivePriceContainer from '../assets/icons/ActivePriceContainer.svg'
-import { PlanActiveness } from '../types/common'
-import { APP_COLORS } from './Constants'
+import NotACtivePriceContainer from '../../assets/icons/NotACtivePriceContainer.svg'
+import ActivePriceContainer from '../../assets/icons/ActivePriceContainer.svg'
+import { PlanActiveness } from '../../types/common'
+import { APP_COLORS } from '../../styles/Constants'
 
 export const Currency = styled.div`
   width: 10px;

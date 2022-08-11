@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { APP_COLORS } from './Constants'
+import { APP_COLORS } from '../../styles/Constants'
 
 export const Banner = styled.div`
   display: flex;

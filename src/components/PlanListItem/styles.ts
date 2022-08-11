@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { PlanActiveness } from '../types/common'
-import { APP_BACKGROUNDS, APP_COLORS } from './Constants'
+import { PlanActiveness } from '../../types/common'
+import { APP_BACKGROUNDS, APP_COLORS } from '../../styles/Constants'
 
 export const PlanItem = styled.div<PlanActiveness>`
   display: flex;

@@ -5,14 +5,14 @@ import {
   BannerTitle,
   ChoosePlanButton,
   PlanListTitle,
-} from '../styles/PlanList.styles'
-import { PlanItems } from '../db/data'
-import { PlanListItem } from './PlanListItem'
+} from './styles'
+import { PlanItems } from '../../db/data'
+import { PlanListItem } from '../PlanListItem/PlanListItem'
 
 export const PlanList = () => {
-  const [activePlan, setActivePlan] = useState(2)
+  const [activePlan, setActivePlan] = useState<number>(2)
 
-  const choosePlanHandler = (activePlan: number) => {
+  const choosePlanHandler = (activePlan: number): void => {
     setActivePlan(activePlan)
   }
 
