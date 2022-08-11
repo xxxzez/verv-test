@@ -4,6 +4,7 @@ import { ReactComponent as NotActiveCheckbox } from '../assets/icons/NotActiveCh
 import { ReactComponent as MostPopularLabel } from '../assets/icons/MostPopularLabel.svg'
 import {
   Checkbox,
+  Label,
   PlanCost,
   PlanDescription,
   PlanItem,
@@ -32,7 +33,11 @@ export const PlanListItem: FC<PlanListItemProps> = ({
         {isActive ? <ActiveCheckbox /> : <NotActiveCheckbox />}
       </Checkbox>
       <PlanDescription>
-        {planItem.isMostPopular && <MostPopularLabel />}
+        {planItem.isMostPopular && (
+          <Label>
+            <MostPopularLabel />
+          </Label>
+        )}
         <PlanTitle>
           {planItem.title}
           {planItem.isSpecialOffer && '⭐️'}

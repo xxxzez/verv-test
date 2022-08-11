@@ -34,6 +34,12 @@ export const PlanDescription = styled.div`
   flex-direction: column;
   justify-content: center;
 `
+
+export const Label = styled.div`
+  margin-top: -2px;
+  margin-left: -2px;
+`
+
 export const PlanCost = styled.div<PlanActiveness>`
   font-weight: ${({ isActive }) => (isActive ? '400' : '300')};
   font-size: 12px;
