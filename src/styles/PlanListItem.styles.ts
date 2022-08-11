@@ -44,6 +44,7 @@ export const PlanCost = styled.div<PlanActiveness>`
   font-weight: ${({ isActive }) => (isActive ? '400' : '300')};
   font-size: 12px;
   line-height: 14px;
+  margin-left: -2px;
 `
 
 export const Checkbox = styled.div`
